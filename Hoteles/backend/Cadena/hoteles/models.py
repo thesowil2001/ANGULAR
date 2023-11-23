@@ -1,19 +1,7 @@
 from django.db import models
-
+from Cadena.categoria.models import categoria
+from Cadena.habitacion.models import habitacion
 # Create your models here.
-class categoria(models.Model):
-    nivel = models.IntegerField(max_length=8)
-    iva = models.CharField(max_length=80)
-    descripcion = models.CharField(max_length=80)
-    
-    class Meta():
-        db_table = "Categoria"
-        
-class habitacion(models.Model):
-    TiposDeHabitacion = models.CharField(max_length=80)
-    
-    class Meta:
-        db_table = "Habitaciones"        
 
 class hoteles(models.Model):
     nombre = models.CharField(max_length=80)

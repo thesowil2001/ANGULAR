@@ -39,6 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Cadena.hoteles.apps.HotelesConfig',
     'Cadena.reservas.apps.ReservasConfig',
+    'Cadena.categoria.apps.CategoriaConfig',
+    'Cadena.habitacion.apps.HabitacionConfig',
+    'Cadena.agencias.apps.AgenciasConfig',
+    'Cadena.personas.apps.PersonasConfig',
     'rest_framework',
 ]
 
@@ -78,12 +82,12 @@ WSGI_APPLICATION = 'misite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'hoteles',
-        'USER': 'root',
+        'USER': 'postgres',
         'PASSWORD': '12345678',
-        'HOST': '127.0.0.1',
-        'PORT': '3308'
+        'HOST': 'localhost',
+        'PORT': '5432'
 
     }
 }
