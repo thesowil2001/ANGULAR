@@ -1,13 +1,8 @@
-from django.urls import path, include
-from rest_framework.routers import DefaultRouter
-from Cadena.categoria.views import categoriaViewset
+from django.urls import path
+from Cadena.categoria.views import categoriaList, categoriaDetail
 
-
-
-router = DefaultRouter()
-router.register(r'', categoriaViewset)
-            
+app_name = "categoria"
 urlpatterns = [
-    path('categorias/',include(router.urls)),
+    path('',  categoriaList.as_view()),
+    path('<int:pk>', categoriaDetail.as_view()),
 ]
-       

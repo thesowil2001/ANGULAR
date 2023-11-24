@@ -1,3 +1,4 @@
+
 from rest_framework import serializers
 from Cadena.agencias.models import  agencias   
         
@@ -6,4 +7,3 @@ class agenciasSerializers(serializers.ModelSerializer):
         model = agencias
         fields = '__all__'
         
-    

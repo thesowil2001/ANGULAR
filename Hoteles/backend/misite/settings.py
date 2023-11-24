@@ -82,12 +82,10 @@ WSGI_APPLICATION = 'misite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'mssql',
         'NAME': 'hoteles',
-        'USER': 'postgres',
-        'PASSWORD': '12345678',
         'HOST': 'localhost',
-        'PORT': '5432'
+        'PORT': '1433'
 
     }
 }

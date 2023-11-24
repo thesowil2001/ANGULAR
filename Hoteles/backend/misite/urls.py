@@ -24,5 +24,5 @@ urlpatterns = [
     path('',include('Cadena.categoria.urls')),
     path('',include('Cadena.reservas.urls')),
     path('',include('Cadena.personas.urls')),
-    path('',include('Cadena.personas.urls')),
+    path('',include('Cadena.agencias.urls')),
 ]

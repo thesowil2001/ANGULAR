@@ -1,13 +1,8 @@
-from django.urls import path, include
-from rest_framework.routers import DefaultRouter
-from Cadena.agencias.views import agenciasViewset
+from django.urls import path
+from Cadena.agencias.views import agenciasList, agenciasDetail
 
-router = DefaultRouter()
-
-
-router.register(r'', agenciasViewset)
-
+app_name = "agencias"
 urlpatterns = [
-
-    path('agencias/',include(router.urls)),
+    path('', agenciasList.as_view()),
+    path('<int:pk>', agenciasDetail.as_view()),
 ]
